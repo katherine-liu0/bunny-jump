@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- load in the p5 core library -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+
+    <!-- note that you can load the p5.js library locally as well -->
+    <!-- <script src="../js/p5.js"></script> -->
+
+    <!-- your custom sketch code -->
+    <script src="sketch.js"></script>
+
+    <!-- custom styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+      body {
+        color: #fff;
+        font-family: Silkscreen;
+        font-size: 100%;
+        text-align: center;
+        line-height: 0.5em;
+      }
+
+      #instruction{
+        margin-top: 50px;
+      }
+
+
+      #p5canvas {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+      }
+
+      a:link,a:visited{
+        color: white;
+        text-decoration: none;
+
+      }
+      #canvas_container {
+        width: 1000px;
+        height: 562px;
+        padding-top: 20px;
+        margin: auto;
+      }
+
+      iframe{
+        border: 5px solid white;
+        width: 100%;
+        height: 100%;
+      }
+      #controls {
+        margin: auto;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .slider {
+        -webkit-appearance: none;
+        width: 50%;
+        height: 15px;
+        background: #000;
+        outline: none;
+        border: 5px solid lawngreen;
+        border-radius: 8px;
+      }
+    
+    </style>
+  </head>
+  <body> 
+    <div id="controls">
+      Customize your Jeans' color: <input type="range" id="b" min="20" max="80" step="1" value="50" oninput="changeBrightness(this);"><br>
+    </div>
+    <div id="canvas_container">
+      <iframe id="game" src="game.html" scrolling="no"></iframe>
+    </div>
+
+    <div id="instruction">
+      <p>Press 'A' and 'D' to move horizontally. Press 'W' to jump<p>
+      <p>Collect the STICKERS and avoid the FIRE ! </p>
+      <p>Blue Planet = 1 point. Red Ice-cream = 2 points</p>
+    </div>
+
+  </body>
+</html>
